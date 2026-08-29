@@ -42,7 +42,14 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
     }
 
     setSubmitting(true);
-    const { error } = await supabase.from("leads").insert(parsed.data);
+    const { error } = await supabase.from("leads").insert({
+      name: parsed.data.name,
+      business_name: parsed.data.business_name || null,
+      email: parsed.data.email,
+      phone: parsed.data.phone || null,
+      services: parsed.data.services,
+      message: parsed.data.message || null,
+    });
     setSubmitting(false);
 
     if (error) {
