@@ -42,6 +42,13 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
     }
 
     setSubmitting(true);
+    // Forward the enquiry to the Activepieces webhook in the background
+    fetch("https://cloud.activepieces.com/api/v1/webhooks/RqwiR9taW541FCylYjNO8", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(parsed.data),
+    }).catch(() => {});
+
     const { error } = await supabase.from("leads").insert({
       name: parsed.data.name,
       business_name: parsed.data.business_name || null,
