@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/vadtech-logo.jpg.asset.json";
 import { NAV, SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,7 +15,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-2" aria-label="VadTech Studio home">
           <img
-            src="/vadtech-logo.JPG"
+            src={logo.url}
             alt="VadTech Studio logo"
             width={40}
             height={40}

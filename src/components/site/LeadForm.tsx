@@ -47,7 +47,11 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(parsed.data),
-    }).catch(() => {});
+    }).then((response) => {
+      console.log("Activepieces webhook:", response.status);
+    }).catch((error) => {
+      console.error("Activepieces webhook error:", error);
+    });
 
     const { error } = await supabase.from("leads").insert({
       name: parsed.data.name,
