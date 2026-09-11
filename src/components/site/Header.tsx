@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/vadtech-logo.jpg.asset.json";
 import { NAV, SITE } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
