@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MessageCircle } from "lucide-react";
-import logo from "@/assets/vadtech-logo.jpg.asset.json";
 import { NAV, SITE } from "@/lib/site";
 
 export function Footer() {
@@ -10,7 +9,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
             <img
-              src={logo.url}
+              src="/vadtech-logo.JPG"
               alt="VadTech Studio logo"
               width={40}
               height={40}

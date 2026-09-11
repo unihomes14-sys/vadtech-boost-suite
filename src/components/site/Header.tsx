@@ -14,7 +14,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-2" aria-label="VadTech Studio home">
           <img
-            src={logo.url}
+            src="/vadtech-logo.JPG"
             alt="VadTech Studio logo"
             width={40}
             height={40}
