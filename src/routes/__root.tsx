@@ -116,6 +116,12 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        {/* VAD AI Receptionist chatbot widget — loads on every page */}
+        <script
+          src="https://vadreceptionist.netlify.app/api/public/widget.js"
+          data-vad-key="33538af72df44fd03327bd7f3447054c"
+          async
+        />
         <Scripts />
       </body>
     </html>
